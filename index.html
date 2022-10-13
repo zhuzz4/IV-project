@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A3 Dashboard</title>
+        <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+        <script src="tableau.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'><link rel="stylesheet" href="./style.css">
+
+    </head>
+    <body onload="initViz();">
+        <iframe id='iframe1' src="iframe.html" style="height:500px;width:500px;" title="Iframe Example" hidden></iframe>
+
+        <nav class="navbar navbar-expand-custom navbar-mainbg">
+            <div id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="javascript:void(0)" onclick="filterOnTransport();">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="SwitchTab('Dashboard 1');">Pedestrian Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="hideIframe('iframe1')" id ='hide_frame_btn;'>Graph</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick=" "></i>Other</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>       
+        
+        <div id="tableauViz"></div>
+        <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+    </body>
+</html>
