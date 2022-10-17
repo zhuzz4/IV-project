@@ -22,21 +22,39 @@ function initViz() {
     var viz_iframe = new tableau.Viz(iFrameDiv, url_barchart,options);
 }
 
+// function poiShow() {
+//     var poi = document.getElementById("poi");
+//     if (poi.checked == true) {
+//         workbook.activateSheetAsync('POI MAP');
+//     }
+//     else{
+//         activeSheet.clearFilterAsync('Theme');
+//     }
+// }
 
 function filterOnTransport() {
-    activeSheet.applyFilterAsync(
-        'Theme',
-        'Transport',
-        tableau.FilterUpdateType.REPLACE
-    );
-}
-
-function clearFilter(){
-    activeSheet.clearFilterAsync('Theme');
+    var trans = document.getElementById("trans");
+    if (trans.checked == true) {
+        filterOnTransport;
+        activeSheet.applyFilterAsync(
+            'Theme',
+            'Transport',
+            tableau.FilterUpdateType.REPLACE
+        );
+    }
+    else{
+        activeSheet.clearFilterAsync('Theme');
+    }
 }
 
 function SwitchTab(sheetName) {
     workbook.activateSheetAsync(sheetName);
+    if(sheetName == 'POI MAP'){
+		document.getElementById("dropdownMenu1").style.visibility = 'visible';
+	}
+	else{
+		document.getElementById("dropdownMenu1").style.visibility = 'hidden';
+	}
 }
 
 

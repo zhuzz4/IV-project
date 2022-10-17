@@ -55,6 +55,31 @@
                 (d.head || d.body).appendChild(s);
                 })();
              </script>
+        <button class=" btn float" id="dropdownMenu1" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="true" onclick="buttonShow()">
+        <i class="fa fa-plus my-float"></i>
+        </button>
+        <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu1" style="margin-top: 10px;">
+  
+            <!-- <li >
+              <label>
+                <input type="checkbox" checked href="javascript:void(0)" id="poi" onclick="poiShow()"> POI
+              </label>
+            </li> -->
+            
+            <li >
+              <label>
+                <input type="checkbox" href="javascript:void(0)" id="trans" onclick="filterOnTransport()"> Transportation
+              </label>
+            </li>
+            
+            <li >
+              <label>
+                <input type="checkbox"> Cafe&Restaurant
+              </label>
+            </li>
+            
+        </ul>
         <div id="tableauViz">
         </div>
         <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
