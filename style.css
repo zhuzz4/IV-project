@@ -106,6 +106,17 @@ body{
                 position:relative;
 }
 
+#FloatMap2{
+        width:650px;
+        height:650px;
+        margin-top:50px;
+        position:fixed;    right:2px;        
+}
+#FloatMap2 #NavCon2{
+                background-color: #ffffff;
+                position:relative;
+}
+
 .checkbox-menu li label {
     display: block;
     padding: 3px 10px;
@@ -174,7 +185,7 @@ body{
 	position:fixed;
 	width:60px;
 	height:60px;
-	top:638px;
+	bottom:25px;
 	right:30px;
 	background-color:#FCD6B0;
 	color:#FFF;
