@@ -102,7 +102,7 @@ body{
         width:800px;
         height:100%;
         margin-top:50px;
-        position:fixed;    left:5px;        
+        position:absolute;    left:5px;        
 }
 #FloatMap #NavCon{
                 background-color: #ffffff;
