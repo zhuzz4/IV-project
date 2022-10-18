@@ -1,0 +1,90 @@
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 600px;
+    /* The height is 400 pixels */
+    width: 60%;
+    /* The width is the width of the web page */
+}
+
+#sidebar {
+    flex-basis: 15rem;
+    flex-grow: 1;
+    padding: 1rem;
+    max-width: 30rem;
+    height: 600px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+#panel {
+  left: 0;
+  width: 22em;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+#search-overlay-search button{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.search-input {
+    width: 100%;
+    margin-top: 0.8em;
+    position: relative;
+}
+
+.search-input input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3em;
+    height: 2.2em;
+    box-sizing: border-box;
+    padding: 0 2.5em 0 1em;
+    font-size: 1em;
+}
+
+.search-input-overlay {
+    position: absolute;
+}
+
+.search-input-overlay.search {
+    right: 2px;
+    top: 1px;
+    bottom: 1px;
+    width: 2.4em;
+}
+.search-input-overlay.search button {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.2em;
+    background: transparent;
+}
+#container {
+    height: 100%;
+    display: flex;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
