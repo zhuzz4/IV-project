@@ -102,18 +102,22 @@ body{
         width:800px;
         height:100%;
         margin-top:50px;
-        position:absolute;    left:5px;        
+        position:absolute;    
+		left:5px;
+		z-index: 1; 
 }
 #FloatMap #NavCon{
-                background-color: #ffffff;
-                position:relative;
+    background-color: #ffffff;
+    position:relative;
 }
 
 #FloatMap2{
-        width:650px;
-        height:650px;
-        margin-top:50px;
-        position:fixed;    right:2px;        
+    width:650px;
+    height:650px;
+    margin-top:50px;
+    position:fixed;    
+	right:2px;   
+	z-index: 1;;     
 }
 #FloatMap2 #NavCon2{
                 background-color: #ffffff;
