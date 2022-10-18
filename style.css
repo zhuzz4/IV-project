@@ -96,13 +96,13 @@ body{
 
 
 #FloatMap{
-        width:100%;
-        height:270px;
+        width:800px;
+        height:100%;
         margin-top:50px;
-        position:fixed;    right:0px;        
+        position:fixed;    left:5px;        
 }
 #FloatMap #NavCon{
-                background:url('images/d.png') repeat-y;
+                background-color: #ffffff;
                 position:relative;
 }
 

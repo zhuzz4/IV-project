@@ -13,7 +13,17 @@
     <body onload="initViz();">
         <div id="FloatMap">
             <div id="NavCon">
-                <iframe id='iframe1' src="iframe.html" style="height:500px;width:500px;" title="Iframe Example" hidden></iframe>
+                <iframe id='iframe1' src="iframe.html" style="height:650px;width:800px;" title="Iframe Example" hidden></iframe>
+            </div>
+        </div>
+        <div id="FloatMap">
+            <div id="NavCon">
+                <iframe id='iframe2' src="map.html" style="height:650px;width:800px;" title="Iframe Example" hidden></iframe>
+            </div>
+        </div>
+        <div id="FloatMap">
+            <div id="NavCon">
+                <iframe id='iframe3' src="POI.html" style="height:650px;width:800px;" title="Iframe Example" hidden></iframe>
             </div>
         </div>
         <nav class="navbar navbar-expand-custom navbar-mainbg">
@@ -28,6 +38,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)" onclick="hideIframe('iframe1')" id ='hide_frame_btn;'>Graph</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="hideIframe('iframe2')" id ='hide_frame_btn;'>Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="hideIframe('iframe3')" id ='hide_frame_btn;'>POI</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)" onclick=" "></i>Other</a>
