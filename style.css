@@ -13,6 +13,9 @@ body{
 	background-color: #FCD6B0;
 	padding: 0px;
 }
+.navbar-nav{
+	display: block;
+}
 #navbarSupportedContent{
 	overflow: hidden;
 	position: relative;
@@ -196,4 +199,11 @@ body{
 
 .my-float{
 	margin-top:6px;
+}
+
+.weatherWidget{
+	position: absolute;
+	width: 200px;
+	top: 15%;
+	left: 20px;
 }

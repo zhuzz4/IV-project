@@ -51,9 +51,11 @@ function SwitchTab(sheetName) {
     workbook.activateSheetAsync(sheetName);
     if(sheetName == 'POI MAP'){
 		document.getElementById("dropdownMenu1").style.visibility = 'visible';
+        document.getElementById("weather").style.visibility = "visible"
 	}
 	else{
 		document.getElementById("dropdownMenu1").style.visibility = 'hidden';
+        document.getElementById("weather").style.visibility = 'hidden';
 	}
 }
 
