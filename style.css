@@ -129,7 +129,8 @@ body{
     height:650px;
     margin-top:50px;
     position:fixed;    
-	right:2px;
+	left:2px;
+	z-index: 1; 
 }
 #FloatMap2 #NavCon2{
                 background-color: #ffffff;
