@@ -3,7 +3,7 @@ function initViz() {
     var containerDiv = document.getElementById("tableauViz");
     var iFrameDiv = document.getElementById("iFrameViz");
 
-    url = "https://public.tableau.com/views/A3_V2/POIMAP?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link";
+    url = "https://public.tableau.com/views/A3_V6/POIDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link";
     url_barchart = "https://public.tableau.com/views/A3_V2/MonthVSPedestrianVolume?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link";
     var options = {
         width:'100%',

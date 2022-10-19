@@ -99,7 +99,7 @@ body{
 
 
 #FloatMap1{
-        width:800px;
+        width:1px;
         height:100%;
         margin-top:50px;
         position:absolute;    
@@ -112,7 +112,7 @@ body{
 }
 
 #FloatMap3{
-        width:800px;
+        width:1px;
         height:100%;
         margin-top:50px;
         position:absolute;    
@@ -125,7 +125,7 @@ body{
 }
 
 #FloatMap2{
-    width:650px;
+    width:1px;
     height:650px;
     margin-top:50px;
     position:fixed;    
