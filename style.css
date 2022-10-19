@@ -98,7 +98,7 @@ body{
 }
 
 
-#FloatMap{
+#FloatMap1{
         width:800px;
         height:100%;
         margin-top:50px;
@@ -106,7 +106,20 @@ body{
 		left:5px;
 		z-index: 1; 
 }
-#FloatMap #NavCon{
+#FloatMap1 #NavCon1{
+    background-color: #ffffff;
+    position:relative;
+}
+
+#FloatMap3{
+        width:800px;
+        height:100%;
+        margin-top:50px;
+        position:absolute;    
+		left:5px;
+		z-index: 1; 
+}
+#FloatMap3 #NavCon3{
     background-color: #ffffff;
     position:relative;
 }

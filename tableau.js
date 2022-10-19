@@ -65,13 +65,20 @@ function hideIframe(iframe_id) {
     let element = document.getElementById(iframe_id);
     let button = document.getElementById('hide_frame_btn')
     let hidden = element.getAttribute("hidden");
+
+    let floatmapid = "FloatMap" + iframe_id[6]
+
     
     if (hidden) {
         element.removeAttribute("hidden");
-        button.innerText = "Hide Iframe";
+        //button.innerText = "Hide Iframe";
+        //document.getElementById("FloatMap").style.width = "visible";
+        document.getElementById(floatmapid).style.width = 800+'px';
         } else {
             element.setAttribute("hidden", "hidden");
-            button.innerText = "Show Iframe";
+            //button.innerText = "Show Iframe";
+            //document.getElementById("FloatMap").style.visibility = 'hidden';
+            document.getElementById(floatmapid).style.width = 1 +'px';
     }
 }
 
@@ -79,6 +86,7 @@ function showIframe(iframe_id) {
     let element = document.getElementById(iframe_id);
     let button = document.getElementById('show_frame_btn')
     let hidden = element.getAttribute("hidden");
+
     
     if (hidden) 
     {
