@@ -101,14 +101,19 @@ function filterOnTransport() {
 
 function SwitchTab(sheetName) {
     workbook.activateSheetAsync(sheetName);
-    if(sheetName == 'POI MAP'){
-		document.getElementById("dropdownMenu1").style.visibility = 'visible';
-        document.getElementById("weather").style.visibility = "visible"
-	}
-	else{
-		document.getElementById("dropdownMenu1").style.visibility = 'hidden';
-        document.getElementById("weather").style.visibility = 'hidden';
-	}
+    document.getElementById("weather111").style.visibility = "hidden"
+        console.log(document.getElementById('weather111').style.visibility)
+
+        console.log(sheetName)
+        if (sheetName === 'POI Dashboard'){
+            console.log('check')
+                    document.getElementById("weather111").style.visibility = "visible"
+
+        }else {
+            console.log('wrong')
+                    document.getElementById("weather111").style.visibility = 'hidden';
+
+        }
 }
 
 function SwitchBtn(sheetName) {
