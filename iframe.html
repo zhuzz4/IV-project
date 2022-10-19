@@ -2,11 +2,19 @@
 <html>
     <head>
         <title>A3 Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
-
         <script src="tableau.js"></script>
+        <link rel="stylesheet" href="./style.css">
     </head>
-    <body onload="initViz();">
+    <body onload="initRanking();">
+
+        <div class="btn-container">
+            <button class="btn poi" id="toppoi" href="javascript:void(0)" onclick="SwitchBtn('TOP 30 POI Rantings');">TOP30 POI</button>
+            <button class="btn hotel" id="tophotel" href="javascript:void(0)" onclick="SwitchBtn('Hotel Ratings');">Hotel Ranking</button>
+            <button class="btn rest" id="toprest" href="javascript:void(0)" onclick="SwitchBtn('Restaurant Ratings');">Restaurant Ranking</button>
+        </div>
         
         <div id="viz_iframe"></div>
         

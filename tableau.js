@@ -1,4 +1,4 @@
-var workbook,activeSheet;
+var workbook,activeSheet,ranking;
 function initViz() {
     var containerDiv = document.getElementById("tableauViz");
     var iFrameDiv = document.getElementById("iFrameViz");
@@ -20,6 +20,23 @@ function initViz() {
 
     var viz = new tableau.Viz(containerDiv, url,options);
     var viz_iframe = new tableau.Viz(iFrameDiv, url_barchart,options);
+}
+
+function initRanking(){
+    var container = document.getElementById("viz_iframe");
+    url = "https://public.tableau.com/views/A3_V6/TOP30POIRatings?:language=zh-CN&:display_count=n&:origin=viz_share_link";
+    var options = {
+        width:'100%',
+        height:1000,
+        hideTabs: true,
+        hideToolbar: true,
+        onFirstInteractive:function(){
+            ranking = viz.getWorkbook();
+            activeSheet = ranking.getActiveSheet();
+
+        }
+    }
+    var viz = new tableau.Viz(container, url, options);
 }
 
 function filterOnHotel() {
@@ -92,6 +109,23 @@ function SwitchTab(sheetName) {
 		document.getElementById("dropdownMenu1").style.visibility = 'hidden';
         document.getElementById("weather").style.visibility = 'hidden';
 	}
+}
+
+function SwitchBtn(sheetName) {
+    // var poi = document.getElementById("toppoi");
+    // var hotel = document.getElementById("tophotel");
+    // var rest = document.getElementById("toprest");
+    ranking.activateSheetAsync(sheetName);
+
+    // if(poi.click == true){
+    //     ranking.activateSheetAsync('TOP 30 POI Rantings');
+    // }
+    // if(hotel.click == true){
+    //     ranking.activateSheetAsync('Hotel Rantings');
+    // }
+    // else{
+    //     ranking.activateSheetAsync('Restaurant Rantings');
+    // }
 }
 
 

@@ -136,7 +136,7 @@ body{
                 position:relative;
 }
 
-.btn:focus{
+/* .btn:focus{
 	outline: 0;
 	color: #000000;
 	box-shadow: 2px 2px 3px #999;
@@ -204,7 +204,7 @@ body{
 .checkbox-menu li.active label:hover,
 .checkbox-menu li.active label:focus {
     background-color: #FCD6B0;
-}
+} */
 
 .float{
 	position:fixed;
@@ -229,3 +229,26 @@ body{
 	top: 60%;
 	left: 20px;
 }
+
+.btn {
+	background-color: inherit;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 16px;
+	padding: 5px;
+	border: none;
+  	cursor: pointer;
+  	display: inline-block;
+	border-radius: 8px;
+}
+
+.btn:hover {
+	color: #000000;
+}
+
+.poi {background-color: #5f5d9ce0;}
+.hotel {background-color: #4fafbece;}
+.rest {background-color: #4b71a7f1;}
