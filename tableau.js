@@ -112,20 +112,7 @@ function SwitchTab(sheetName) {
 }
 
 function SwitchBtn(sheetName) {
-    // var poi = document.getElementById("toppoi");
-    // var hotel = document.getElementById("tophotel");
-    // var rest = document.getElementById("toprest");
     ranking.activateSheetAsync(sheetName);
-
-    // if(poi.click == true){
-    //     ranking.activateSheetAsync('TOP 30 POI Rantings');
-    // }
-    // if(hotel.click == true){
-    //     ranking.activateSheetAsync('Hotel Rantings');
-    // }
-    // else{
-    //     ranking.activateSheetAsync('Restaurant Rantings');
-    // }
 }
 
 
