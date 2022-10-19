@@ -35,7 +35,7 @@
                         <a class="nav-link" href="javascript:void(0)" onclick="SwitchTab('POI MAP');">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" onclick="SwitchTab('Dashboard 1');">Pedestrian Dashboard</a>
+                        <a class="nav-link" href="javascript:void(0)" onclick="SwitchTab('Pedestrain Dashboard');">Pedestrian Dashboard</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)" onclick="hideIframe('iframe1')" id ='hide_frame_btn;'>Graph</a>
@@ -78,21 +78,27 @@
         </button>
         <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu1" style="margin-top: 10px;">
   
-            <!-- <li >
+            <li >
               <label>
-                <input type="checkbox" checked href="javascript:void(0)" id="poi" onclick="poiShow()"> POI
+                <input type="checkbox" href="javascript:void(0)" id="hotel" onclick="filterOnHotel()"> Hotel
               </label>
-            </li> -->
+            </li>
+
+            <li >
+                <label>
+                  <input type="checkbox" href="javascript:void(0)" id="place" onclick="filterOnPlace()"> Place To Go
+                </label>
+              </li>
+
+            <li >
+                <label>
+                  <input type="checkbox" href="javascript:void(0)" id="restaurant" onclick="filterOnRestaurant()"> Restaurant
+                </label>
+              </li>
             
             <li >
               <label>
                 <input type="checkbox" href="javascript:void(0)" id="trans" onclick="filterOnTransport()"> Transportation
-              </label>
-            </li>
-            
-            <li >
-              <label>
-                <input type="checkbox"> Cafe&Restaurant
               </label>
             </li>
             

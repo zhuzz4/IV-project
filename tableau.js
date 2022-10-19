@@ -4,7 +4,7 @@ function initViz() {
     var iFrameDiv = document.getElementById("iFrameViz");
 
     url = "https://public.tableau.com/views/A3_V6/POIDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link";
-    url_barchart = "https://public.tableau.com/views/A3_V2/MonthVSPedestrianVolume?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link";
+    // url_barchart = "https://public.tableau.com/views/A3_V6/PedestrainDashboard?:language=zh-CN&:display_count=n&:origin=viz_share_link";
     var options = {
         width:'100%',
         height:1000,
@@ -22,15 +22,50 @@ function initViz() {
     var viz_iframe = new tableau.Viz(iFrameDiv, url_barchart,options);
 }
 
-// function poiShow() {
-//     var poi = document.getElementById("poi");
-//     if (poi.checked == true) {
-//         workbook.activateSheetAsync('POI MAP');
-//     }
-//     else{
-//         activeSheet.clearFilterAsync('Theme');
-//     }
-// }
+function filterOnHotel() {
+    var hotel = document.getElementById("hotel");
+    if (hotel.checked == true) {
+        filterOnTransport;
+        activeSheet.applyFilterAsync(
+            'Theme',
+            'Hotel',
+            tableau.FilterUpdateType.REPLACE
+        );
+    }
+    else{
+        activeSheet.clearFilterAsync('Theme');
+    }
+}
+
+function filterOnPlace() {
+    var place = document.getElementById("palce");
+    if (place.checked == true) {
+        filterOnTransport;
+        activeSheet.applyFilterAsync(
+            'Theme',
+            'Place To Go',
+            tableau.FilterUpdateType.REPLACE
+        );
+    }
+    else{
+        activeSheet.clearFilterAsync('Theme');
+    }
+}
+
+function filterOnRestaurant() {
+    var restaurant = document.getElementById("restaurant");
+    if (restaurant.checked == true) {
+        filterOnTransport;
+        activeSheet.applyFilterAsync(
+            'Theme',
+            'Restaurant',
+            tableau.FilterUpdateType.REPLACE
+        );
+    }
+    else{
+        activeSheet.clearFilterAsync('Theme');
+    }
+}
 
 function filterOnTransport() {
     var trans = document.getElementById("trans");
