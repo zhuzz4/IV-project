@@ -1,4 +1,6 @@
 var workbook,activeSheet,ranking,about;
+var attr = 'hidden';
+var attr2 = 'hidden';
 function initViz() {
     var containerDiv = document.getElementById("tableauViz");
     var iFrameDiv = document.getElementById("iFrameViz");
@@ -115,6 +117,7 @@ function SwitchTab(sheetName) {
             document.getElementById("weather111").style.visibility = "hidden";
             document.getElementById("tableauViz").style.marginLeft = '30px';
             document.getElementById("text").style.display = "contents";
+            document.getElementById("tableauViz").style.marginLeft = '30px';
         }
         else {
             console.log('wrong')
@@ -132,22 +135,39 @@ function SwitchBtn(sheetName) {
 
 function hideIframe(iframe_id) {
     let element = document.getElementById(iframe_id);
-    let button = document.getElementById('hide_frame_btn')
-    let hidden = element.getAttribute("hidden");
 
     let floatmapid = "FloatMap" + iframe_id[6]
 
     
-    if (hidden) {
+    if (attr === 'hidden') {
         element.removeAttribute("hidden");
         //button.innerText = "Hide Iframe";
         //document.getElementById("FloatMap").style.width = "visible";
         document.getElementById(floatmapid).style.width = 800+'px';
+        attr = "show"
         } else {
             element.setAttribute("hidden", "hidden");
             //button.innerText = "Show Iframe";
             //document.getElementById("FloatMap").style.visibility = 'hidden';
             document.getElementById(floatmapid).style.width = 1 +'px';
+            attr = "hidden"
+    }
+}
+
+function hideIframe2(iframe_id) {
+    let element = document.getElementById(iframe_id);
+
+    let floatmapid = "FloatMap" + iframe_id[6]
+
+    
+    if (attr === 'hidden') {
+        element.removeAttribute("hidden");
+        document.getElementById(floatmapid).style.width = 800+'px';
+        attr2 = "show"
+        } else {
+            element.setAttribute("hidden", "hidden");
+            document.getElementById(floatmapid).style.width = 1 +'px';
+            attr2 = "hidden"
     }
 }
 

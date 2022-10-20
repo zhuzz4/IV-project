@@ -101,7 +101,7 @@ body{
 
 
 #FloatMap1{
-        width:1px;
+        width:800px;
         height:100%;
         margin-top:50px;
         position:absolute;    
@@ -114,7 +114,7 @@ body{
 }
 
 #FloatMap3{
-        width:1px;
+        width:800px;
         height:100%;
         margin-top:50px;
         position:absolute;    
@@ -130,7 +130,7 @@ body{
     width:1px;
     height:650px;
     margin-top:50px;
-    position:fixed;    
+    position:absolute;    
 	left:2px;
 	z-index: 1; 
 }
@@ -250,6 +250,11 @@ body{
 }
 
 .btn:hover {
+	color: #ffffffcb;
+	box-shadow: 2px 2px 5px #999;
+}
+
+.btn:focus {
 	color: #ffffffcb;
 	box-shadow: 2px 2px 5px #999;
 }
