@@ -102,6 +102,9 @@ function filterOnTransport() {
 }
 
 function SwitchTab(sheetName) {
+    document.getElementById('iframe1').setAttribute("hidden", "hidden");
+    document.getElementById('iframe2').setAttribute("hidden", "hidden");
+    document.getElementById('iframe3').setAttribute("hidden", "hidden");
     workbook.activateSheetAsync(sheetName);
     document.getElementById("weather111").style.visibility = "hidden"
         console.log(document.getElementById('weather111').style.visibility)
@@ -131,10 +134,25 @@ function SwitchBtn(sheetName) {
     ranking.activateSheetAsync(sheetName);
 }
 
+function hide_unused_Iframe(iframe_id) {
+  if (iframe_id == 'iframe1'){
+    document.getElementById('iframe2').setAttribute("hidden", "hidden");
+    document.getElementById('iframe3').setAttribute("hidden", "hidden");
+  }else if (iframe_id == 'iframe2') {
+    document.getElementById('iframe1').setAttribute("hidden", "hidden");
+    document.getElementById('iframe3').setAttribute("hidden", "hidden");
+
+  }else if (iframe_id == 'iframe3') {
+  document.getElementById('iframe1').setAttribute("hidden", "hidden");
+  document.getElementById('iframe2').setAttribute("hidden", "hidden");
+  }
+}
+
 
 
 function hideIframe(iframe_id) {
     let element = document.getElementById(iframe_id);
+    hide_unused_Iframe(iframe_id)
 
     let floatmapid = "FloatMap" + iframe_id[6]
 
