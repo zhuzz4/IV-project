@@ -119,7 +119,7 @@ function SwitchTab(sheetName) {
             document.getElementById("text").style.display = "contents";
             document.getElementById("tableauViz").style.marginLeft = '30px';
         }
-        else {
+        else if (sheetName === 'Pedestrain Dashboard'){
             console.log('wrong')
                     document.getElementById("weather111").style.visibility = 'hidden';
                     document.getElementById("text").style.display = "none";
@@ -151,23 +151,6 @@ function hideIframe(iframe_id) {
             //document.getElementById("FloatMap").style.visibility = 'hidden';
             document.getElementById(floatmapid).style.width = 1 +'px';
             attr = "hidden"
-    }
-}
-
-function hideIframe2(iframe_id) {
-    let element = document.getElementById(iframe_id);
-
-    let floatmapid = "FloatMap" + iframe_id[6]
-
-    
-    if (attr === 'hidden') {
-        element.removeAttribute("hidden");
-        document.getElementById(floatmapid).style.width = 800+'px';
-        attr2 = "show"
-        } else {
-            element.setAttribute("hidden", "hidden");
-            document.getElementById(floatmapid).style.width = 1 +'px';
-            attr2 = "hidden"
     }
 }
 
