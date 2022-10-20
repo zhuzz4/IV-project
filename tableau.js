@@ -1,6 +1,7 @@
 var workbook,activeSheet,ranking,about;
 var attr = 'hidden';
 var attr2 = 'hidden';
+var attr3 = "hidden";
 function initViz() {
     var containerDiv = document.getElementById("tableauViz");
     var iFrameDiv = document.getElementById("iFrameViz");
@@ -151,8 +152,10 @@ function hide_unused_Iframe(iframe_id) {
 
 
 function hideIframe(iframe_id) {
+    document.getElementById('iframe1').setAttribute("hidden", "hidden");
     let element = document.getElementById(iframe_id);
-    hide_unused_Iframe(iframe_id)
+    let hidden = element.getAttribute("hidden");
+    hide_unused_Iframe(iframe_id);
 
     let floatmapid = "FloatMap" + iframe_id[6]
 
@@ -162,13 +165,67 @@ function hideIframe(iframe_id) {
         //button.innerText = "Hide Iframe";
         //document.getElementById("FloatMap").style.width = "visible";
         document.getElementById(floatmapid).style.width = 800+'px';
-        attr = "show"
+        attr = "show";
+        attr2 = "hidden";
+        attr3 = "hidden";
         } else {
             element.setAttribute("hidden", "hidden");
             //button.innerText = "Show Iframe";
             //document.getElementById("FloatMap").style.visibility = 'hidden';
             document.getElementById(floatmapid).style.width = 1 +'px';
-            attr = "hidden"
+            attr = "hidden";
+    }
+}
+
+function hideIframe2(iframe_id) {
+    document.getElementById('iframe2').setAttribute("hidden", "hidden");
+    let element = document.getElementById(iframe_id);
+    let hidden = element.getAttribute("hidden");
+    hide_unused_Iframe(iframe_id);
+
+    let floatmapid = "FloatMap" + iframe_id[6]
+
+    
+    if (attr2 === 'hidden') {
+        element.removeAttribute("hidden");
+        //button.innerText = "Hide Iframe";
+        //document.getElementById("FloatMap").style.width = "visible";
+        document.getElementById(floatmapid).style.width = 800+'px';
+        attr2 = "show";
+        attr = "hidden";
+        attr3 = "hidden";
+        } else {
+            element.setAttribute("hidden", "hidden");
+            //button.innerText = "Show Iframe";
+            //document.getElementById("FloatMap").style.visibility = 'hidden';
+            document.getElementById(floatmapid).style.width = 1 +'px';
+            attr2 = "hidden";
+    }
+}
+
+function hideIframe3(iframe_id) {
+    document.getElementById('iframe3').setAttribute("hidden", "hidden");
+    let element = document.getElementById(iframe_id);
+    let hidden = element.getAttribute("hidden");
+    hide_unused_Iframe(iframe_id);
+
+    let floatmapid = "FloatMap" + iframe_id[6]
+
+    
+    if (attr3 === 'hidden') {
+        element.removeAttribute("hidden");
+        //button.innerText = "Hide Iframe";
+        //document.getElementById("FloatMap").style.width = "visible";
+        document.getElementById(floatmapid).style.width = 800+'px';
+        attr3 = "show";
+        attr = "hidden";
+        attr2 = "hidden";
+        } else {
+            element.setAttribute("hidden", "hidden");
+            //button.innerText = "Show Iframe";
+            //document.getElementById("FloatMap").style.visibility = 'hidden';
+            document.getElementById(floatmapid).style.width = 1 +'px';
+            attr3 = "hidden";
     }
 }
 
