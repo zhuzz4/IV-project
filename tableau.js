@@ -1,4 +1,4 @@
-var workbook,activeSheet,ranking;
+var workbook,activeSheet,ranking,about;
 function initViz() {
     var containerDiv = document.getElementById("tableauViz");
     var iFrameDiv = document.getElementById("iFrameViz");
@@ -19,7 +19,7 @@ function initViz() {
     }
 
     var viz = new tableau.Viz(containerDiv, url,options);
-    var viz_iframe = new tableau.Viz(iFrameDiv, url_barchart,options);
+    // var viz_iframe = new tableau.Viz(iFrameDiv, url_barchart,options);
 }
 
 function initRanking(){
@@ -107,11 +107,19 @@ function SwitchTab(sheetName) {
         console.log(sheetName)
         if (sheetName === 'POI Dashboard'){
             console.log('check')
-                    document.getElementById("weather111").style.visibility = "visible"
+                    document.getElementById("weather111").style.visibility = "visible";
+                    document.getElementById("text").style.display = "none";
 
-        }else {
+        }
+        if (sheetName === 'Expanding Donut Chart'){
+            document.getElementById("weather111").style.visibility = "hidden";
+            document.getElementById("tableauViz").style.marginLeft = '30px';
+            document.getElementById("text").style.display = "contents";
+        }
+        else {
             console.log('wrong')
                     document.getElementById("weather111").style.visibility = 'hidden';
+                    document.getElementById("text").style.display = "none";
 
         }
 }
@@ -158,6 +166,5 @@ function showIframe(iframe_id) {
         button.innerText = "Hide Iframe";
     }
 }
-
 
 

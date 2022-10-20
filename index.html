@@ -31,23 +31,23 @@
             <div id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-                    <li class="nav-item active" >
+                    <li class="nav-item nav-item1 active" >
                         <a class="nav-link" href="javascript:void(0)" onclick="SwitchTab('POI Dashboard');">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item nav-item1">
                         <a class="nav-link" href="javascript:void(0)" onclick="SwitchTab('Pedestrain Dashboard');">Pedestrian Dashboard</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item nav-item1">
                         <a class="nav-link" href="javascript:void(0)" onclick="hideIframe('iframe1')" id ='hide_frame_btn;'>POI Ranking</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item nav-item1">
                         <a class="nav-link" href="javascript:void(0)" onclick="hideIframe('iframe2')" id ='hide_frame_btn;'>Direction</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item nav-item1">
                         <a class="nav-link" href="javascript:void(0)" onclick="hideIframe('iframe3')" id ='hide_frame_btn;'>POI</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" onclick=" "></i>Other</a>
+                    <li class="nav-item nav-item1">
+                        <a class="nav-link" href="javascript:void(0)" onclick="SwitchTab('Expanding Donut Chart');" id="aboutTab;"></i>About</a>
                     </li>
                 </ul>
             </div>
@@ -72,6 +72,9 @@
                 (d.head || d.body).appendChild(s);
                 })();
              </script>
+        <div id="text" class="text">
+            <h3 style="margin-left: 30px; margin-top: 15px;">About Page</h3>
+        </div>
         <div id="tableauViz">
         </div>
         <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
