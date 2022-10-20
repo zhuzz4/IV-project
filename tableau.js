@@ -115,6 +115,9 @@ function SwitchTab(sheetName) {
             console.log('check')
                     document.getElementById("weather111").style.visibility = "visible";
                     document.getElementById("text").style.display = "none";
+                    document.getElementById('FloatMap1').style.width = 1 +'px';
+                    document.getElementById('FloatMap2').style.width = 1 +'px';
+                    document.getElementById('FloatMap3').style.width = 1 +'px';
 
         }
         if (sheetName === 'Expanding Donut Chart'){
