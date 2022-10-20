@@ -177,6 +177,9 @@ function hideIframe(iframe_id) {
             //document.getElementById("FloatMap").style.visibility = 'hidden';
             document.getElementById(floatmapid).style.width = 1 +'px';
             attr = "hidden";
+            document.getElementById('FloatMap1').style.width = 1 +'px';
+            document.getElementById('FloatMap2').style.width = 1 +'px';
+            document.getElementById('FloatMap3').style.width = 1 +'px';
     }
 }
 
@@ -197,12 +200,16 @@ function hideIframe2(iframe_id) {
         attr2 = "show";
         attr = "hidden";
         attr3 = "hidden";
+        
         } else {
             element.setAttribute("hidden", "hidden");
             //button.innerText = "Show Iframe";
             //document.getElementById("FloatMap").style.visibility = 'hidden';
             document.getElementById(floatmapid).style.width = 1 +'px';
             attr2 = "hidden";
+            document.getElementById('FloatMap1').style.width = 1 +'px';
+            document.getElementById('FloatMap2').style.width = 1 +'px';
+            document.getElementById('FloatMap3').style.width = 1 +'px';
     }
 }
 
@@ -229,6 +236,9 @@ function hideIframe3(iframe_id) {
             //document.getElementById("FloatMap").style.visibility = 'hidden';
             document.getElementById(floatmapid).style.width = 1 +'px';
             attr3 = "hidden";
+            document.getElementById('FloatMap1').style.width = 1 +'px';
+            document.getElementById('FloatMap2').style.width = 1 +'px';
+            document.getElementById('FloatMap3').style.width = 1 +'px';
     }
 }
 
